@@ -1,0 +1,106 @@
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  body{
+    display: grid;
+    margin:0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(251, 163, 163, 0.974)
+}
+section{
+    margin:0;
+    display:grid;
+    position:relative;
+}
+
+#intro{
+    position: relative;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+   height: 100vh;
+background-color: #eda1b9;
+}
+#Talk{
+  color: rgb(72, 20, 20);
+  size: 30rem;
+}
+
+#introwords{
+    position:absolute;
+  
+  margin-top:auto;
+  font-size: 3vw;;
+  width: 100%;;
+    z-index: 2;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  /*  left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+
+
+#WhatIsIt{
+    background-color: rgb(254, 232, 251);
+    height:100vh ;
+}
+#flower1{
+    height:20%;
+}
+#flower{
+    height:20dvb;
+    width: 20dvb;
+    
+    
+
+}
+
+
+
+#moon-img{
+   
+  width:80%;
+  height: auto;
+  position: absolute;
+  z-index:1 ;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+   
+}
+#green-fern{
+  width:30vw;
+  z-index:0;
+  height: auto;
+  position: absolute;
+  top:70%;
+  left:85%;
+  transform: translate(-50%,-50%);
+}
+#WhatIsItWords{
+    position: relative;;
+}
+#choices{
+    display: flex;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+
+}
+.topic{
+   flex-direction: row;
+    position: relative;
+ margin:20;
+}
+
