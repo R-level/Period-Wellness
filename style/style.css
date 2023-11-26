@@ -11,12 +11,14 @@ html {
     display: grid;
     margin:0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgba(251, 163, 163, 0.974)
+    color: rgba(251, 163, 163, 0.974);
+    
 }
 section{
     margin:0;
     display:grid;
     position:relative;
+    height: 100vh;
 }
 
 #intro{
@@ -26,10 +28,63 @@ section{
     grid-row: 1;
    height: 100vh;
 background-color: #eda1b9;
-}
+}   
 #Talk{
   color: rgb(72, 20, 20);
   size: 30rem;
+  position: absolute;
+  left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+   
+}
+.TopicHeading{
+  color: rgb(72, 20, 20);
+  font-size: 9vw;
+  height: auto;
+  text-align: center;
+ width:100%;
+  position:absolute;
+  top:30%;
+  left:50%;
+  transform: translate(-50%,-50%); 
+   z-index: 10;
+}
+#DefinitionHeading{
+  color: rgb(72, 20, 20);
+  font-size: 9vw;
+  height: auto;
+  text-align: center;
+ width:100%;
+  position:absolute;
+  top:3%;
+  left:30%;
+  transform: translate(-50%,-50%); 
+   z-index: 10;
+   font-family: Dancing Script;
+}
+/**.DefinitionColumns{
+  
+}**/
+.DefinitionColumns,ul{
+  position:absolute;
+  top:30%;
+  left:10%;
+  width:50vw;
+height: auto;
+font-size: 2em;
+}
+.DefinitionColumns,ul,li{
+  padding-top:2%;
+  padding-bottom:2%;
+
+}
+
+#GreenEndPeriodPovertyCup{
+  width:25vw;
+  position: absolute;
+  right:10%;
+  top:10%;
 }
 
 #introwords{
@@ -37,8 +92,8 @@ background-color: #eda1b9;
   
   margin-top:auto;
   font-size: 3vw;;
-  width: 100%;;
-    z-index: 2;
+  width: 100%;
+    z-index: 4;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -50,16 +105,44 @@ background-color: #eda1b9;
 
 
 #WhatIsIt{
-    background-color: rgb(254, 232, 251);
-    height:100vh ;
+  background-color: #f8ede5;
+    height:105vh;
 }
-#flower1{
-    height:20%;
+#green_cup{
+width:18vw;
+position:absolute;
+left:0%;
+top:1%;
+
 }
+#pink_flower{
+  width:20vw;
+  position:absolute;
+  right:0%;
+  bottom:0%;
+}
+#pink_daughter{
+  width:16vw;
+  position:absolute;
+  left:5%;
+  top:85%;
+  transform:translate(-50%,-50%);
+}
+#green_flower{
+  width:25vw;
+  position:absolute;
+  right:0%;
+  top:0
+}
+
 #flower{
-    height:20dvb;
-    width: 20dvb;
-    
+    height:auto;
+    width: 8vw;
+    z-index:3;
+    position:absolute;
+    top:54%;
+    left:50%;
+    transform: translate(-50%,-50%); 
     
 
 }
@@ -68,10 +151,10 @@ background-color: #eda1b9;
 
 #moon-img{
    
-  width:80%;
+  width:60vw;
   height: auto;
   position: absolute;
-  z-index:1 ;
+  z-index:2;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -82,9 +165,67 @@ background-color: #eda1b9;
   z-index:0;
   height: auto;
   position: absolute;
-  top:70%;
-  left:85%;
-  transform: translate(-50%,-50%);
+  top:50%;
+  left:80%;
+  transform: translate(-50%);
+}
+#green-plant{
+  width:20vw;
+  z-index:0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  height: auto;
+  position: absolute;
+  top:50%;
+  left:10%;
+ 
+}
+#daughterWhite{
+  width:27vw;
+  z-index:0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  height: auto;
+  position: absolute;
+  bottom:-0.5%;
+  left:2%;
+ 
+}
+#green_flower{
+width:15vw;
+position: absolute;
+top:2%;
+right:1%;
+}
+#spottyPinkPad{
+  width:25vw;
+  position:absolute;
+  bottom:0%;
+  right:-2%;
+}
+#brownFern{
+  width: 20vw;
+  position:absolute;
+  display:inline;
+left:-10%;
+top:1%;
+}
+#uterus{
+  width:35vw;
+  z-index:0;
+  height: auto;
+  position: absolute;
+  top:10%;
+  left:10%;
+ 
+}
+#panty{
+  width:35vw;
+  z-index:0;
+  height: auto;
+  position: absolute;
+  top:10%;
+  left:60%;
 }
 #WhatIsItWords{
     position: relative;;
@@ -92,15 +233,91 @@ background-color: #eda1b9;
 #choices{
     display: flex;
     position: absolute;
-    top:50%;
+    top:75%;
     left:50%;
     transform: translate(-50%,-50%);
 
 
 }
 .topic{
-   flex-direction: row;
+   flex-wrap: wrap;
     position: relative;
- margin:20;
+ margin:20px;
+ padding-top:2%;
+ height: auto;
+ text-align:center;
+ color: rgb(72, 20, 20);
+ background-color: #f8ede5;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(72, 20, 20);
+ font-size: 2vw;
+
+}a:hover{
+  color:#eda1b9;
+} 
+#IntroToMenstrualCycle{
+  background-color: #E8A0BB;
+  height: 110vh;
+}
+#MenstrualCycleDefinition{
+  background-color:rgb(250, 250, 250)
+}
+#MenstrualCycle{
+ background-color:rgb(250, 250, 250)
+}
+#MenstrualCycle > h1{
+top:1%;
+}
+
+#Period_Struggles{
+  background-color: #fcc8b9;
+  height:120vh;
+}
+#Period_Struggles >.TopicHeading{
+color:rgb(58, 110, 99);
+top:10%;
+font-family:Dancing Script;
+}
+#inline_Struggle{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  box-sizing: content-box;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  top:63%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.strugglePic{ 
+margin:8%;
+}
+
+.strugglePic > img{
+  display: block;
+  width:100%;
+  height:100%;
+margin-left: auto;
+margin-right:auto; 
+}
+.strugglePic > p{
+  position: relative;
+  text-align: center;
+  color:rgb(72, 20, 20);
+  font-size: 2em;
+}
+
+
+#Debunking{
+  background-color: rgb(58, 110, 99);
+ 
+}
+#Myths{
+  background-color: #eda1b9;
 }
 
