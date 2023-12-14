@@ -66,15 +66,30 @@ background-color: #eda1b9;
 /**.DefinitionColumns{
   
 }**/
-.DefinitionColumns,ul{
+.ColumnsLeft{
   position:absolute;
-  top:30%;
-  left:10%;
+  top:25%;
+  left:32%;
+  width:40vw;
+height: auto;
+font-size: 1.5em;
+transform:translate(-50%)
+}
+.ColumnsLeft,ul,li{
+  padding-top:2%;
+  padding-bottom:2%;
+
+}
+
+.ColumnsRight{
+  position:absolute;
+  top:25%;
+  left:50%;
   width:50vw;
 height: auto;
-font-size: 2em;
+font-size: 1.5em;
 }
-.DefinitionColumns,ul,li{
+.ColumnsRight,ul,li{
   padding-top:2%;
   padding-bottom:2%;
 
@@ -84,7 +99,8 @@ font-size: 2em;
   width:25vw;
   position: absolute;
   right:10%;
-  top:10%;
+  top:50%;
+  transform:translate(0%,-50%)
 }
 
 #introwords{
@@ -258,6 +274,15 @@ a{
 }a:hover{
   color:#eda1b9;
 } 
+#viewer3d{
+width: 50vw;
+height: 50vh;
+position:absolute;
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+}
 #IntroToMenstrualCycle{
   background-color: #E8A0BB;
   height: 110vh;
@@ -268,9 +293,29 @@ a{
 #MenstrualCycle{
  background-color:rgb(250, 250, 250)
 }
+
 #MenstrualCycle > h1{
 top:1%;
 }
+
+#DysmenorrheaHeading{
+position:absolute;
+top:1%;
+left:50%;
+transform: translate(-50%,-50%);
+}
+#Dysmenorrhea{
+  height:120vh;
+}
+
+#GreenPeriodPower{
+  width:25vw;
+  position:absolute;
+  top:55%;
+  left:25%;
+  transform:translate(-50%,-50%)
+}
+
 
 #Period_Struggles{
   background-color: #fcc8b9;
