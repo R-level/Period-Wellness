@@ -196,16 +196,22 @@ top:1%;
   left:10%;
  
 }
-#daughterWhite{
+#daughterBrown{
   width:27vw;
   z-index:0;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
   height: auto;
   position: absolute;
   bottom:-0.5%;
   left:2%;
- 
+ animation: gaze 5.5s ease-in-out infinite
+
+}
+@keyframes gaze{
+  0%{transform:rotateZ(0deg);}
+  25%{ transform: rotateZ(-3deg); }
+  50%{transform:rotateZ(-5deg);}
+  75% { transform: rotateZ(-3deg); }
+  100% { transform: rotateZ(0deg); }
 }
 #green_flower{
 width:15vw;
@@ -389,10 +395,11 @@ margin-right:auto;
 }
 
 @keyframes jiggle {
-  0%{transform: rotate(-0deg);}
-  25%{ transform: rotate(-8deg); }
-  75% { transform: rotate(8deg); }
-  100% { transform: rotate(0deg); }
+  0%{transform:rotateZ(0deg);}
+  25%{ transform: rotateZ(-3deg); }
+  50%{transform:rotateZ(-5deg);}
+  75% { transform: rotateZ(3deg); }
+  100% { transform: rotateZ(0deg); }
 }
 
 .wobble{
@@ -412,7 +419,7 @@ margin-right:auto;
 @keyframes shrink{
   0% {  transform: scale(1);}
   50%{transform: scale(0.9);}
-  100%{}
+  
 }
 
 
