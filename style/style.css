@@ -201,16 +201,14 @@ top:1%;
   z-index:0;
   height: auto;
   position: absolute;
-  bottom:-0.5%;
+  bottom:-1%;
   left:2%;
- animation: gaze 5.5s ease-in-out infinite
-
-}
+ animation: gaze 5.5s ease-out infinite}
 @keyframes gaze{
   0%{transform:rotateZ(0deg);}
-  25%{ transform: rotateZ(-3deg); }
-  50%{transform:rotateZ(-5deg);}
-  75% { transform: rotateZ(-3deg); }
+  
+  50%{transform:rotateZ(-10deg);}
+  
   100% { transform: rotateZ(0deg); }
 }
 #green_flower{
@@ -223,7 +221,7 @@ right:1%;
   width:25vw;
   position:absolute;
   bottom:0%;
-  right:-2%;
+  right:2%;
 }
 #brownFern{
   width: 20vw;
@@ -389,7 +387,8 @@ margin-right:auto;
   background-color: #eda1b9;
 }
 
-.jiggle {
+.jiggle  {
+  
   animation: jiggle 5.5s ease infinite;
  
 }
