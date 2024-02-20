@@ -21,6 +21,7 @@ section{
     height: 100vh;
 }
 
+
 #intro{
     position: relative;
     text-align: center;
@@ -45,7 +46,7 @@ background-color: #eda1b9;
   text-align: center;
  width:100%;
   position:absolute;
-  top:30%;
+  top:10%;
   left:50%;
   transform: translate(-50%,-50%); 
    z-index: 10;
@@ -72,8 +73,9 @@ background-color: #eda1b9;
   left:32%;
   width:40vw;
 height: auto;
-font-size: 1.5em;
-transform:translate(-50%)
+font-size: 2.5vw;
+transform:translate(-50%);
+
 }
 .ColumnsLeft,ul,li{
   padding-top:2%;
@@ -84,10 +86,11 @@ transform:translate(-50%)
 .ColumnsRight{
   position:absolute;
   top:25%;
-  left:40%;
+  right:19%;
   width: 45vw;
 height: auto;
-font-size: 1.5em;
+font-size:2.5vw;
+
 }
 .ColumnsRight,ul,li{
   padding-top:2%;
@@ -124,6 +127,7 @@ font-size: 1.5em;
   background-color: #f8ede5;
     height:105vh;
 }
+
 #green_cup{
 width:18vw;
 position:absolute;
@@ -248,7 +252,11 @@ top:1%;
   left:60%;
 }
 #WhatIsItWords{
-    position: relative;;
+    position: relative;
+
+}
+#WhatIsItWords .TopicHeading{
+  top:20%;
 }
 #choices{
     display: flex;
@@ -278,15 +286,8 @@ a{
 }a:hover{
   color:#eda1b9;
 } 
-#viewer3d{
-width: 50vw;
-height: 50vh;
-position:absolute;
-left:50%;
-top:50%;
 
-transform:translate(-50%,-50%);
-}
+
 #IntroToMenstrualCycle{
   background-color: #E8A0BB;
   height: 110vh;
@@ -336,14 +337,31 @@ transform: translate(-50%,-50%);
   left:25%;
   transform:translate(-50%,-50%)
 }
+#Period_Poverty{
+  height:150vh;
+  padding-bottom: 20em;
+}
+#Period_Poverty p{
+color:#7c4a4a;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
 
+#povertyUterus {
+width: 35vw;
+position:absolute;
+bottom:30%;
+left:20%;
+opacity: 40%;
+rotate:-15deg;
+
+}
 
 #Period_Struggles{
   background-color: #fcc8b9;
   height:120vh;
 }
 #Period_Struggles >.TopicHeading{
-color:rgb(58, 110, 99);
+color:#3a6e63;
 top:10%;
 font-family:Dancing Script;
 }
@@ -374,7 +392,7 @@ margin-right:auto;
 .strugglePic > p{
   position: relative;
   text-align: center;
-  color:rgb(72, 20, 20);
+  color:#481414;
   font-size: 2em;
 }
 
@@ -385,8 +403,45 @@ margin-right:auto;
 }
 #Myths{
   background-color: #eda1b9;
+  height: fit-content;
+}
+#Myths h1{
+  color:#481414;
+  text-align: center;
+  font-size:200%;
+}
+#Myths #mythHeading{
+  width: 200px;
+  position:absolute;
+  display:inline;
+  
+}
+#mythContainer{
+  display: flex;
+  flex-direction: column;
+  
 }
 
+#Myths .myth{
+background-color: rgb(97, 20, 94);
+color:#eda1b9;
+height:50px;
+text-align: center;
+font-size:120%;
+text-wrap: wrap;
+}
+
+#Myths .fact{
+  background-color: #1c957b;
+color:azure;
+height:50px;
+text-align: center;
+border-top: #f8ede5;
+border-width: 10px;
+border-color: #e3d4d4;
+font-size:120%;
+text-wrap: wrap;
+}
 .jiggle  {
   
   animation: jiggle 5.5s ease infinite;
@@ -420,5 +475,12 @@ margin-right:auto;
   50%{transform: scale(0.9);}
   
 }
+.reveal{
+  visibility: visible;
+}
+.hide{
+  visibility: hidden;
+}
+
 
 
