@@ -346,6 +346,14 @@ color:#7c4a4a;
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+hr{
+  border-color:#e0caca;
+  border-width: 2px;
+  border-inline-end-style: hidden;
+  border-inline-start-style: hidden;
+  border-top: hidden;
+}
+
 #povertyUterus {
 width: 35vw;
 position:absolute;

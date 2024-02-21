@@ -1,6 +1,9 @@
 const painImages = document.querySelectorAll('.painImage');
 const achingImages = document.querySelectorAll('.achingImage');
 const stigmaImages = document.querySelectorAll('.stigmaImage');
+
+
+
 const isElementInViewport = (el) => {
   const rect = el.getBoundingClientRect();
   return (
@@ -10,6 +13,7 @@ const isElementInViewport = (el) => {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
+
 
 const handleScroll = () => {
     achingImages.forEach((image)=>{
