@@ -64,9 +64,7 @@ background-color: #eda1b9;
    z-index: 10;
    font-family: Dancing Script;
 }
-/**.DefinitionColumns{
-  
-}**/
+
 .ColumnsLeft{
   position:absolute;
   top:25%;
@@ -80,7 +78,7 @@ transform:translate(-50%);
 .ColumnsLeft,ul,li{
   padding-top:2%;
   padding-bottom:2%;
-
+  list-style:none;
 }
 
 .ColumnsRight{
@@ -95,6 +93,7 @@ font-size:2.5vw;
 .ColumnsRight,ul,li{
   padding-top:2%;
   padding-bottom:2%;
+  list-style:none;
 
 }
 
@@ -299,6 +298,78 @@ a{
  background-color:#EDE8EA;
  height:100vh;
 }
+/*############################################*/
+.diagram {
+  width: min(30rem, 100%);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+}
+.diagram > .item { display: contents }
+/* diagram */
+.diagram > .item::after {
+  content: "";
+  grid-column: 1;
+  place-self: center;
+  grid-row: 1/calc(var(--items) + 1);
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  
+  --degree: calc(360deg * var(--perc));
+  background-image: 
+    conic-gradient( 
+      from 0deg,
+      var(--clr) var(--degree), 
+      transparent calc(var(--degree) + 0.25deg)
+    );
+  
+  --width: calc(50% / (var(--items) + .5));
+  --start: calc(var(--width) * 0.5 + var(--width) * var(--idx));
+  --stop: calc(var(--start) + var(--width));
+  --mask-image: radial-gradient(
+    100% 100%,
+    transparent 0 calc(var(--start) - 1px), 
+    rgb(0, 0, 0) var(--start) var(--stop), 
+    transparent calc(var(--stop) + 1px)
+  );
+  -webkit-mask-image: var(--mask-image);
+  mask-image: var(--mask-image);
+  opacity: var(--opacity, 1);
+  transition: opacity 250ms ease;
+  animation: degreeIn 5s ease;
+}
+@keyframes degreeIn {
+  from { --degree: 0deg }
+}
+/* label */
+.diagram > .item > label { 
+  display: flex; 
+  gap: 0.5rem; 
+  color: #b28787; 
+  font-family: system-ui, sans-serif;
+  align-items: center;
+  padding-block: 0.5rem;
+}
+.diagram > .item > label::before { 
+  content: "▣"; 
+  color: var(--clr) 
+}
+
+/* hover */
+.diagram > .item:where(:hover,:focus) > label{ 
+  color: var(--clr) 
+}
+/* hover label, decrease opacity other items*/
+.diagram:has(>.item>label:where(:hover,:focus)) > .item:not(:where(:hover,:focus))::after{
+ --opacity: 0.1
+}
+/* fallback rules that contain :has() */
+@supports not selector(:has(p)){
+  .diagram:hover > :not(.item:where(:hover, :focus))::after { --opacity: 0.1 }
+}
+/*########################################*/
 
 #MenstrualCycle > h1{
 top:1%;
@@ -344,6 +415,14 @@ transform: translate(-50%,-50%);
 #Period_Poverty p{
 color:#7c4a4a;
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+hr{
+  border-color:#e0caca;
+  border-width: 2px;
+  border-inline-end-style: hidden;
+  border-inline-start-style: hidden;
+  border-top: hidden;
 }
 
 #povertyUterus {
