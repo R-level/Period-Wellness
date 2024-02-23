@@ -298,6 +298,20 @@ a{
  background-color:#EDE8EA;
  height:100vh;
 }
+#menstrual_graph{
+  transform: rotate(15deg);
+  width: 25cap;
+  height: 25cap;
+
+  background: conic-gradient(
+    #4F81BD 10deg, #F0A6C6 10.05deg 50deg,#BC8EB6 50.05deg 170deg , #8064A2 170.05deg 360deg
+    );
+
+  mask-image: radial-gradient(
+    100% 100%,transparent 0 9.8%,
+     rgb(0, 0, 0) 10% 30%, 
+    transparent 30.2% 100%);
+    }
 /*############################################*/
 .diagram {
   width: min(30rem, 100%);
@@ -318,12 +332,12 @@ a{
   pointer-events: none;
   
   --degree: calc(360deg * var(--perc));
-  background-image: 
+  /*background-image: 
     conic-gradient( 
       from 0deg,
       var(--clr) var(--degree), 
       transparent calc(var(--degree) + 0.25deg)
-    );
+    );*/
   
   --width: calc(50% / (var(--items) + .5));
   --start: calc(var(--width) * 0.5 + var(--width) * var(--idx));
