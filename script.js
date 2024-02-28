@@ -1,6 +1,8 @@
 const painImages = document.querySelectorAll('.painImage');
 const achingImages = document.querySelectorAll('.achingImage');
 const stigmaImages = document.querySelectorAll('.stigmaImage');
+
+
 const isElementInViewport = (el) => {
   const rect = el.getBoundingClientRect();
   return (

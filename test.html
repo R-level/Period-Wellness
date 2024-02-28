@@ -4,28 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/test.css">
+    <style>
+        
+        #arc{
+            width: 100px;
+            height: 100px;
+            border-width:200px;
+            border-color: rgb(18, 24, 24);
+            position: absolute;
+            top:50%;
+            left:50%;
+            background-color: rgb(13, 213, 43);
+            border-radius: 50%  ;
+            transform: rotate(30deg);
+        }
+        #arc:before{
+            content:"";
+            background-image:radial-gradient(circle at 100%, rgba(17, 29, 158, 0.816) 0 30%,rgb(194, 195, 192) 40% 50%, rgb(112, 116, 131) 70% 100%);
+
+            width: 99px;
+            height: 98.5px;
+            position:absolute;
+            left:0.5%;
+            top:0%;
+            border-radius: 50% ;
+            transform: rotate(-90deg);
+
+        }
+        #arc:after{
+            content:"";
+            background-image: linear-gradient(rgb(65, 61, 61) 0, rgb(39, 175, 107) 20%, rgb(192, 230, 255) 50% ,rgb(0, 47, 255) 80%,rgb(65, 61, 61) );
+            width: 9px;
+            height: 200px;
+            position:absolute;
+            left:45%;
+            top:-42%;
+            border-radius: 50% ;
+            transform: rotate(20deg);
+            opacity: 60%;
+        }
+      #graph{
+        position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 10px auto 35px;
+      }
+        #menses{
+            position: absolute;
+  width: 200px;
+  height: 200px;
+  clip: rect(0px, 200px, 200px, 100px);
+  transform:translate3d(0,0,0);
+        }
+        #menses span{
+            
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(95, 29, 29);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip: rect(0px, 200px, 200px, 0px);
+        }
+        #luteal{
+
+        }
+    </style>
 </head>
+
 <body>
-    
-        <!-- adjust --items and --idx when adding/removing items -->
-    <div class="diagram" style="--items: 5">
-    <div class="item" style="--idx: 0; --perc: .8; --clr: #f1566f">
-    <label>Item 1: 80%</label>
-    </div>
-    <div class="item" style="--idx: 1; --perc: .4; --clr: #ff9650">
-    <label>Item 2: 40%</label>
-    </div>
-    <div class="item" style="--idx: 2; --perc: .6; --clr: #fae250">
-    <label>Item 3: 60%</label>
-    </div>
-    <div class="item" style="--idx: 3; --perc: .8; --clr: #00bb6d">
-      <label>Item 4: 80%</label>
-    </div>
-    <div class="item" style="--idx: 4; --perc: .6; --clr: #1b6ac6">
-        <label>Item 5: 60%</label>
-      </div>
-    </div>
-    
+   <div id="graph">
+    <div id="menses">
+        <span> </span></div>
+    <div id="luteal"></div>
+   </div>
 </body>
 </html>
+
+

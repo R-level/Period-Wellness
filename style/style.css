@@ -299,19 +299,75 @@ a{
  height:100vh;
 }
 #menstrual_graph{
-  transform: rotate(15deg);
-  width: 25cap;
+  /*background: conic-gradient(
+    #4F81BD 45deg, #F0A6C6 45.05deg 150deg,#BC8EB6 150.05deg 210deg , #8064A2 210.05deg 360deg
+    );*/
+    position: absolute;
+    left:50%;
+    top: 1%;
+    transform: translate(-50%);
+    width: 25cap;
   height: 25cap;
-
-  background: conic-gradient(
-    #4F81BD 10deg, #F0A6C6 10.05deg 50deg,#BC8EB6 50.05deg 170deg , #8064A2 170.05deg 360deg
-    );
-
-  mask-image: radial-gradient(
-    100% 100%,transparent 0 9.8%,
-     rgb(0, 0, 0) 10% 30%, 
-    transparent 30.2% 100%);
     }
+    #menstrual_graph > span:hover{
+      opacity: 70%;
+    }
+    #menses_arc{
+      position: absolute;
+      transform: rotate(15deg);
+      width: 25cap;
+      height: 25cap;
+    background: conic-gradient(
+      #4F81BD 45deg, transparent 45.05deg 150deg, transparent 150.05deg 210deg , transparent 210.05deg 360deg
+    );
+  border-radius: 50%;
+  clip-path: ellipse(10% 10% at 50% 50%);
+    }
+   #follicular_arc{
+    position: absolute;
+    transform: rotate(15deg);
+    width: 25cap;
+    height: 25cap;
+  background: conic-gradient(
+    transparent 45deg, #F0A6C6 45.05deg 150deg, transparent 150.05deg 210deg , transparent 210.05deg 360deg
+  );
+border-radius: 50%;
+   }
+    #ovulation_arc{
+      position: absolute;
+      transform: rotate(15deg);
+      width: 25cap;
+      height: 25cap;
+    background: conic-gradient(
+      transparent 45deg, transparent 45.05deg 150deg, #BC8EB6 150.05deg 210deg , transparent 210.05deg 360deg
+    );
+  border-radius: 50%;
+    }
+    #luteal_arc{
+      position: absolute;
+      transform: rotate(15deg);
+      width: 25cap;
+      height: 25cap;
+    background: conic-gradient(
+    transparent 45deg, transparent 45.05deg 150deg, transparent 150.05deg 210deg , #8064A2 210.05deg 360deg
+    );
+  border-radius: 50%;
+    }
+
+   /* #menstrual_graph::after{
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-color: #e2dde8;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+    }
+        /*mask-image: radial-gradient(100% 100%, transparent 0 9.8%,
+          rgb(0, 0, 0) 10% 30%,
+          transparent 30.2% 100%);*/
 /*############################################*/
 .diagram {
   width: min(30rem, 100%);
