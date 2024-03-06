@@ -298,6 +298,19 @@ a{
  background-color:#EDE8EA;
  height:150vh;
 }
+
+
+
+/* Define a class for the fade-in animation */
+.fade-in {
+  opacity: 1;
+ transition:  opacity 0.5s ease-in-out;
+}
+/* Define the fade-out animation */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 #menstrual_graph{
   /*background: conic-gradient(
     #4F81BD 45deg, #F0A6C6 45.05deg 150deg,#BC8EB6 150.05deg 210deg , #8064A2 210.05deg 360deg
