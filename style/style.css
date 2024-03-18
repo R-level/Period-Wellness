@@ -303,13 +303,21 @@ a{
 
 /* Define a class for the fade-in animation */
 .fade-in {
-  opacity: 1;
- transition:  opacity 0.5s ease-in-out;
+  animation: Fade-In 0.5s;
+}
+@keyframes Fade-In {
+   0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+  
 }
 /* Define the fade-out animation */
 .fade-out {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in;
 }
 #menstrual_graph{
   /*background: conic-gradient(
@@ -319,92 +327,11 @@ a{
     left:85%;
     top: 1%;
     transform: translate(-50%);
-    width: 25cap;
-  height: 25cap;
+    width: 40vw;
+  height: 40vw;
   
     }
-    
-    #menses_arc{
-     
-      position: absolute;
-      width: 25cap;
-      height: 25cap;
-    background: conic-gradient(
-      #4F81BD 45deg, transparent 45deg 150deg, transparent 150.05deg 210deg , transparent 210.05deg 360deg
-    );
-     border-radius: 50%;
-   
-    
-  clip-path: polygon(49.8% 0%,50% 50%,100% 1%,50% 0%);
-    }
-    #menses_arc:hover{
-      box-shadow: inset 0 0 100px rgba(28, 28, 28, 0.5);
-      width:25.5cap;
-      height:25.5cap;
-      left:-1%;
-      top:-1%;
-    }
-     #follicular_arc {
-  
-       position: absolute;
-      
-       width: 25cap;
-       height: 25cap;
-       background: conic-gradient(transparent 45deg, #F0A6C6 45.05deg 150deg, transparent 150.05deg 210deg, transparent 210.05deg 359deg);
-       border-radius: 50%;
-       
-       clip-path: polygon(100% 0%, 50% 50%, 78.7% 100%, 100% 100%);
-  
-     }
-     #follicular_arc:hover{
-      box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
-      width:25.7cap;
-      height:25.7cap;
-      left:-1.5%;
-      top:-1.5%;
-     }
-        #ovulation_arc {
-         
-          position: absolute;
-          
-          width: 25cap;
-          height: 25cap;
-          background: conic-gradient(transparent 45deg, transparent 45.05deg 150deg, #BC8EB6 150.05deg 210deg, transparent 210.05deg 360deg);
-          border-radius: 50%;
-          
-           clip-path: polygon(21% 100%,50% 50%,79.1% 100%)
-        }
-        #ovulation_arc:hover{
-          box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
-          width:25.5cap;
-          height:25.5cap;
-          left:-1%;
-      top:-1%;
-        }
-    #luteal_arc{
-      
-      position: absolute;
-      
-      width: 25cap;
-      height: 25cap;
-   background: conic-gradient(
-    transparent 45deg, transparent 45.05deg 150deg, transparent 150.05deg 209deg , #8064A2 210.05deg 360deg
-    );
-  border-radius: 50%;
-
-  
-    clip-path: polygon(0% 0%,0% 100%,21.5% 100%,50.4% 50.1%,50% 0%)
-    }
-    #luteal_arc:hover{
-      box-shadow: inset 0px 0px 100px rgba(60, 60, 60, 0.5);
-      width:25.5cap;
-      height:25.5cap;
-      left:-1%;
-      top:-1%;
-    }
-   
-
-   #menstrual_graph::after{
+    #menstrual_graph::after{
       content: "";
       position: absolute;
       width: 50%;
@@ -415,6 +342,84 @@ a{
       transform: translate(-50%,-50%);
       border-radius: 50%;
     }
+    
+    #menses_arc{
+     
+      position: absolute;
+      width: 40vw;
+      height: 40vw;
+    background: conic-gradient(
+      #4f81bd 45.05deg, transparent 45.05deg 150deg, transparent 150.05deg 210deg , transparent 210.05deg 360deg
+    );
+     border-radius: 50%;
+   
+    
+  clip-path: polygon(49.8% 0%,50% 50%,100% 1%,50% 0%);
+    }
+    #menses_arc:hover{
+      box-shadow: inset 0 0 100px rgba(28, 28, 28, 0.5);
+    
+    }
+    #menses_arc::before{
+      content:'menstration';
+      color: #345b8a;
+      font-size:2vw;
+      position:absolute;
+      right: 2%;
+      top:-1%;
+    }
+     #follicular_arc {
+  
+       position: absolute;
+      
+       width: 40vw;
+       height: 40vw;
+       background: conic-gradient(transparent 45deg, #F0A6C6 45.05deg 150deg, transparent 150.05deg 210deg, transparent 210.05deg 359deg);
+       border-radius: 50%;
+       
+       clip-path: polygon(100% 0%, 50% 50%, 78.7% 100%, 100% 100%);
+  
+     }
+     #follicular_arc:hover{
+      box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
+      
+     }
+        #ovulation_arc {
+         
+          position: absolute;
+          
+          width: 40vw;
+          height: 40vw;
+          background: conic-gradient(transparent 45deg, transparent 45.05deg 150deg, #BC8EB6 150.05deg 210deg, transparent 210.05deg 360deg);
+          border-radius: 50%;
+          
+           clip-path: polygon(21% 100%,50% 50%,79.1% 100%)
+        }
+        #ovulation_arc:hover{
+          box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
+         
+        }
+    #luteal_arc{
+      
+      position: absolute;
+      
+      width: 40vw;
+      height: 40vw;
+   background: conic-gradient(
+    transparent 0deg 45deg, transparent 45deg 150deg, transparent 150deg 209deg , #8064A2 209deg 360deg
+    );
+  border-radius: 50%;
+
+  
+    clip-path: polygon(0% 0%,0% 100%,21.5% 100%,50.4% 50.1%,50% 0%)
+    }
+    #luteal_arc:hover{
+      box-shadow: inset 0px 0px 100px rgba(60, 60, 60, 0.5);
+     
+    }
+   
+
+  
         /*mask-image: radial-gradient(100% 100%, transparent 0 9.8%,
           rgb(0, 0, 0) 10% 30%,
           transparent 30.2% 100%);
