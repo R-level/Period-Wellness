@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,9 @@
   
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 </style>
-
+<script src="script.js" type="module"></script>
 </head>
+
 <!--This website aims to educate laymen about the issues contributing to 
 period poverty and how we can address it-->
 <body>
@@ -59,7 +60,7 @@ period poverty and how we can address it-->
         
         <section id="Period_Poverty">
             <h1 class="TopicHeading"> Period Poverty</h1>
-            <img id=povertyUterus src="images/uterus.png" alt="">
+            <img id=povertyUterus src="images/cup5.png" alt="">
             <div class="ColumnsLeft" style="width:25%">
                 
                 
@@ -92,8 +93,9 @@ period poverty and how we can address it-->
             <h1 id="DefinitionHeading">Definition</h1>
             <div class="ColumnsLeft">
                 <ul><li>Menstruation is a monthly occurence that biological females experience 
-                    between adolescence and late maturity.  
+                    between adolescence and late maturity. 
                     </li>
+             <hr>
                     <li> What happens during this time?
                        
                        Look at the next section for more information</li>
@@ -106,43 +108,35 @@ period poverty and how we can address it-->
         <section id="MenstrualCycle">
             <h1 class="TopicHeading">The Menstrual Cycle</h1>
            <div class="ColumnsLeft">
-            <ul><li>The average length of a menstrual cycle is 28 days. However, 
-            a cycle can range in length from 21 days to 
-            about 35 days and still be normal.
-            </li>
-           <!-- <li>The menses phase: This phase begins on the first day of your period. 
-                It's when the lining of your uterus sheds through your vagina if pregnancy hasn’t occurred. 
-                Most people bleed for three to five days, but a period lasting only
-                 three days to as many as seven days is usually not a cause for worry.
-            </li>
-           <li> The follicular phase: This phase begins on the day you get your period and ends at ovulation 
-            (it overlaps with the menses phase and ends when you ovulate). 
-            During this time, the level of the hormone estrogen rises, 
-            which causes the lining of your uterus (the endometrium) to grow and thicken. 
-            In addition, another hormone — follicle-stimulating hormone (FSH) — causes follicles in your ovaries to grow. 
-            During days 10 to 14, one of the developing follicles will form a fully mature egg (ovum).</li>
-<li>Ovulation: This phase occurs roughly at about day 14 in a 28-day menstrual cycle. 
-    A sudden increase in another hormone
-     — luteinizing hormone (LH) — causes your ovary to release its egg.
-      This event is ovulation.
-</li>
-<li>The luteal phase: This phase lasts from about day 15 to day 28. 
-    Your egg leaves your ovary and begins to travel through your fallopian tubes to your uterus. 
-    The level of the hormone progesterone rises to help prepare your uterine lining for pregnancy. 
-    If the egg becomes fertilized by sperm and attaches itself to your uterine wall (implantation), you become pregnant. 
-    If pregnancy doesn’t occur, estrogen and progesterone levels drop and the thick lining of your uterus sheds during your period.</li>
---> </ul>
+            <p> The average length of a menstrual cycle is 28 days. However, a cycle can range in length from 21 days to about 35 days and still be normal.</p>
+          
+
             </div>
       <img id="Brown_Flower" src="images/brown_flower.png" alt="brown flower">
-      <img id="graph" src="images/graph.png" alt="graph"/>
-
-        </section>
-       
+      <!--<img id="graph" src="images/graph.png" alt="graph"/>-->
+     
+      <div class=ColumnsRight>
         
-        <section id="Period_Struggles">
-            <h1 class="TopicHeading">Period Struggles</h1>
-            
+        <div id="menstrual_graph">
+         <span id="menses_arc" class="menses_hover"></span>
+         <span id="follicular_arc" class="follicular_hover"></span>
+         <span id="ovulation_arc" class="ovulation_hover"></span>
+         <span id="luteal_arc" class="luteal_hover"></span>
+         
+         
+                  </div>
+
+    
+    </div>
+</div>
+</div>
+</section>
+<section id="Period_Struggles">
+    <h1 class="TopicHeading">Period Struggles</h1>
+    
+    
             <div id="inline_Struggle">
+
             <div  class="strugglePic">
                 <img class="achingImage" src="images/aches.png" alt="woman holds her aching side">
                 <p>Aches</p>
@@ -171,7 +165,8 @@ period poverty and how we can address it-->
             <div id="mythContainer">
                     <div id=#mythHeading; style="background-color:white;" >
                         <h1><span style="color:rgb(97, 20, 94)">Myth</span> or <span style="color:#1c957b">Fact</span></h1></div>
-                        <div class="myth">You can't swim or workout during period.</div>
+        <div class="info_card"></div>
+                        <!-- <div class="myth">You can't swim or workout during period.</div>
             <div class="fact">Tampons do not take away your virginity.
             </div>
             <div class="myth">Period blood is toxic.</div>
@@ -189,7 +184,7 @@ period poverty and how we can address it-->
             <div class="myth"> Menstruation is evolutionarily useless.</div>
             <div class="fact"> There is no such thing as a normal period. It is different for every women.
             </div>
-
+        -->
                         
                             
                         
@@ -203,7 +198,7 @@ period poverty and how we can address it-->
 
      
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>
