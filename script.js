@@ -1,5 +1,3 @@
-
-import infoData from "./info.json" assert{ type: "json"};
 const painImage = document.querySelector('.painImage');
 const achingImage = document.querySelector('.achingImage');
 const stigmaImage = document.querySelector('.stigmaImage');
@@ -146,6 +144,14 @@ const createGraphInteraction = () => {
 //  const newInfo = new Info(info.type, info.text, info.message);
 //  infoArray.push(newInfo);
 //})
-
+async function getData(){
+  const response = await fetch('https://raw.githubusercontent.com/R-level/Period-Wellness/main/data/info.json');
+  const data = await response.json();
+  const infoList = data.info;
+  forEach (infoList, (info)=>{
+    console.log(info);
+  })
+  return myInfoArray
+}
 createGraphInteraction();
-console.log(infoData);
+getData();
