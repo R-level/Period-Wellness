@@ -147,11 +147,11 @@ const createGraphInteraction = () => {
 async function getData(){
   const response = await fetch('https://raw.githubusercontent.com/R-level/Period-Wellness/main/data/info.json');
   const data = await response.json();
-  const infoList = data.info;
-  forEach (infoList, (info)=>{
-    console.log(info);
-  })
-  return myInfoArray
+  const info = JSON.stringify(data);
+  const infoList = JSON.parse(info);
+const infoArray = infoList.info;
+console.log(infoArray);  
+   
 }
 createGraphInteraction();
 getData();
