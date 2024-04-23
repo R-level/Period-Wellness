@@ -1,0 +1,86 @@
+[
+    {
+        "type": "myth",
+        "text": "You can't swim or workout during your period.",
+        "message": "You can swim or workout during your period."
+        
+    }
+    ,
+    {
+        "type": "fact",
+        "text": "Tampons do not take away your virginity.",
+        "message": "Your viginity is determined by whether you have had penetrative sex."
+        
+    }
+    ,
+    {
+        "type": "myth",
+        "text": "Period blood is toxic.",
+        "message": "Discharge from the vagina is not toxic."
+        
+    }
+    ,
+    {
+        "type": "fact",
+        "text": "You can have sex during your period.",
+        "message": "You can have sex during your period. You can fall pregnant during this time too, so be careful."
+        
+    }
+    ,
+    {
+        "type": "myth",
+        "text": "You cannot enter the kitchen during your period.",
+        "message": "You can do many things on your period. With the right sanitary products you can build your own kitchen on your period."
+        
+    }
+    ,
+    {
+        "type": "fact",
+        "text": "You can get pregnant during your period.",
+        "message": "You can get pregnant during your period, so be careful."
+        
+    }
+    ,  {
+        "type": "myth",
+        "text": "Your menstrual cramps disappear when you get married.",
+        "message": "Your menstrual cramps do not disappear when you get married."
+        
+    }
+    ,
+    {
+        "type": "fact",
+        "text": "Taking birth control pills can cause irregular periods",
+        "message": "Taking birth control can cause irregular periods."
+        
+    }
+    ,
+    {
+        "type": "myth",
+        "text": "If you use a tampon it could dissapear in your reproductive system.",
+        "message": "If you use a tampon it could won't dissapear in your reproductive system"
+        
+    },
+    
+    {
+        "type": "fact",
+        "text": "If you have unprotected sex during your period you can contract HIV/AIDS",
+        "message": "If you have unprotected sex during your period you can contract HIV/AIDS from an infected person."
+        
+    }
+    ,
+    {
+        "type": "fact",
+        "text":   "Menstruation is evolutionarily useless.",
+        "message": "Menstruation is a normal and healthy cycle. It is needed for our species to reproduce."  
+    }
+    ,
+    {
+        "type":"fact",
+        "text":"There is no such thing as a normal period. It is different for every women.",
+        "message":"Although there is no such thing as a normal period. A healthy period may require medical intervention. Seek out your medical professional if you have any period problems."
+        
+    }
+
+
+  
+]

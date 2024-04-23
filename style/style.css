@@ -299,7 +299,11 @@ a{
  height:150vh;
 }
 
-
+#MenstrualCycle>.ColumnsLeft{
+  position: absolute;
+  left:30%;
+  top:20%
+}
 
 /* Define a class for the fade-in animation */
 .fade-in {
@@ -324,13 +328,25 @@ a{
     #4F81BD 45deg, #F0A6C6 45.05deg 150deg,#BC8EB6 150.05deg 210deg , #8064A2 210.05deg 360deg
     );*/
     position: absolute;
-    left:85%;
+    left:50%;
     top: 1%;
     transform: translate(-50%);
-    width: 40vw;
-  height: 40vw;
-  
+    width: 38vw;
+  height: 38vw;
+  transform: rotate(-20deg);
+  animation:floating 20s ease-in-out infinite;
     }
+  @keyframes floating{
+    0%{
+      transform:  translateY(10px) rotate(0deg);
+    }
+    50%{
+      transform:  translateY(-10px) rotate(10deg);
+    }
+    100%{
+      transform: translateY(10px) rotate(0deg)
+          }
+  }
     #menstrual_graph::after{
       content: "";
       position: absolute;
@@ -346,155 +362,123 @@ a{
     #menses_arc{
      
       position: absolute;
-      width: 40vw;
-      height: 40vw;
+      width: 38vw;
+      height: 38vw;
     background: conic-gradient(
       #4f81bd 45.05deg, transparent 45.05deg 150deg, transparent 150.05deg 210deg , transparent 210.05deg 360deg
     );
      border-radius: 50%;
    
     
-  clip-path: polygon(49.8% 0%,50% 50%,100% 1%,50% 0%);
+  clip-path: polygon(49.8% 0%,49.8% 50%,60% 80%,100% 2%,50% -1%);
     }
-    #menses_arc:hover{
-      box-shadow: inset 0 0 100px rgba(28, 28, 28, 0.5);
+    .menses_hover:hover{
+      box-shadow: inset 0 0 100px rgb(73, 73, 73, 0.5);
+    
+    }
+    .selected_menses_arc{
+      box-shadow: inset 0 0 100px rgba(244, 223, 65, 0.5);
     
     }
     #menses_arc::before{
       content:'menstration';
-      color: #345b8a;
+      color: #ebedf1;
       font-size:2vw;
       position:absolute;
-      right: 2%;
-      top:-1%;
+      right: 21%;
+      top:12%;
+      opacity: 60%;
     }
      #follicular_arc {
   
        position: absolute;
       
-       width: 40vw;
-       height: 40vw;
-       background: conic-gradient(transparent 45deg, #F0A6C6 45.05deg 150deg, transparent 150.05deg 210deg, transparent 210.05deg 359deg);
+       width: 38vw;
+       height: 38vw;
+       background: conic-gradient(transparent 45.05deg, #f0a8c7 45.05deg 150deg, transparent 150.05deg 210deg, transparent 210.05deg 359deg);
        border-radius: 50%;
        
-       clip-path: polygon(100% 0%, 50% 50%, 78.7% 100%, 100% 100%);
+       clip-path: polygon(100% 0%,49.5% 50%, 78.7% 100%, 100% 100%);
   
      }
-     #follicular_arc:hover{
+     .follicular_hover:hover{
       box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
-      
+     
      }
-        #ovulation_arc {
-         
-          position: absolute;
-          
-          width: 40vw;
-          height: 40vw;
-          background: conic-gradient(transparent 45deg, transparent 45.05deg 150deg, #BC8EB6 150.05deg 210deg, transparent 210.05deg 360deg);
-          border-radius: 50%;
-          
-           clip-path: polygon(21% 100%,50% 50%,79.1% 100%)
-        }
-        #ovulation_arc:hover{
-          box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
-         
-        }
+   
+  .selected_follicular_arc{
+    box-shadow: inset 0px 0px 100px rgba(226, 236, 29, 0.326);
+     
+  }
+   
+     #follicular_arc::before{
+      content:'follicular';
+      color: #6d3b3f;
+      font-size:2vw;
+      position:absolute;
+      left: 78%;
+      top:50%;
+      opacity: 60%;
+     }
+
+  #ovulation_arc {
+   
+    position: absolute;
+    
+    width: 38vw;
+    height: 38vw;
+    background: conic-gradient(transparent 45deg, transparent 45.05deg 150deg, #BC8EB6 150.05deg 210deg, transparent 210.05deg 360deg);
+    border-radius: 50%;
+    
+     clip-path: polygon(21% 100%,50% 50%,79.1% 100%)
+  }
+  .ovulation_hover:hover{
+    box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
+   
+  }
+  #ovulation_arc::before{
+    content:'ovulation';
+    color: #42161a;
+    font-size:2vw;
+    position:absolute;
+    right: 40%;
+    top:83%;
+    opacity: 60%;
+  }
+  .selected_ovulation_arc{
+    box-shadow: inset 0px 0px 100px rgba(244, 223, 65, 0.5);
+  }
     #luteal_arc{
       
       position: absolute;
       
-      width: 40vw;
-      height: 40vw;
+      width: 38vw;
+      height: 38vw;
    background: conic-gradient(
-    transparent 0deg 45deg, transparent 45deg 150deg, transparent 150deg 209deg , #8064A2 209deg 360deg
+    transparent 0deg 209deg , #8064A2 209deg 360deg 
     );
   border-radius: 50%;
 
   
-    clip-path: polygon(0% 0%,0% 100%,21.5% 100%,50.4% 50.1%,50% 0%)
+    clip-path: polygon(0% 0%,0% 100%,21.5% 100%,50.15% 50%,50.15% 0%)
     }
-    #luteal_arc:hover{
-      box-shadow: inset 0px 0px 100px rgba(60, 60, 60, 0.5);
+    .luteal_hover:hover{
+      box-shadow: inset 0px 0px 100px rgba(55, 37, 74, 0.5);
      
     }
-   
-
-  
-        /*mask-image: radial-gradient(100% 100%, transparent 0 9.8%,
-          rgb(0, 0, 0) 10% 30%,
-          transparent 30.2% 100%);
-/*############################################*/
-.diagram {
-  width: min(30rem, 100%);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 1rem;
-}
-.diagram > .item { display: contents }
-/* diagram */
-.diagram > .item::after {
-  content: "";
-  grid-column: 1;
-  place-self: center;
-  grid-row: 1/calc(var(--items) + 1);
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  pointer-events: none;
-  
-  --degree: calc(360deg * var(--perc));
-  /*background-image: 
-    conic-gradient( 
-      from 0deg,
-      var(--clr) var(--degree), 
-      transparent calc(var(--degree) + 0.25deg)
-    );*/
-  
-  --width: calc(50% / (var(--items) + .5));
-  --start: calc(var(--width) * 0.5 + var(--width) * var(--idx));
-  --stop: calc(var(--start) + var(--width));
-  --mask-image: radial-gradient(
-    100% 100%,
-    transparent 0 calc(var(--start) - 1px), 
-    rgb(0, 0, 0) var(--start) var(--stop), 
-    transparent calc(var(--stop) + 1px)
-  );
-  -webkit-mask-image: var(--mask-image);
-  mask-image: var(--mask-image);
-  opacity: var(--opacity, 1);
-  transition: opacity 250ms ease;
-  animation: degreeIn 5s ease;
-}
-@keyframes degreeIn {
-  from { --degree: 0deg }
-}
-/* label */
-.diagram > .item > label { 
-  display: flex; 
-  gap: 0.5rem; 
-  color: #b28787; 
-  font-family: system-ui, sans-serif;
-  align-items: center;
-  padding-block: 0.5rem;
-}
-.diagram > .item > label::before { 
-  content: "▣"; 
-  color: var(--clr) 
-}
-
-/* hover */
-.diagram > .item:where(:hover,:focus) > label{ 
-  color: var(--clr) 
-}
-/* hover label, decrease opacity other items*/
-.diagram:has(>.item>label:where(:hover,:focus)) > .item:not(:where(:hover,:focus))::after{
- --opacity: 0.1
-}
-/* fallback rules that contain :has() */
-@supports not selector(:has(p)){
-  .diagram:hover > :not(.item:where(:hover, :focus))::after { --opacity: 0.1 }
-}
-/*########################################*/
+   #luteal_arc::before{
+    content:"luteal";
+    color: #ffffff;
+    font-size:2vw;
+    position:absolute;
+    left: 10%;
+    top:35%;
+    opacity: 60%;
+   }
+   .selected_luteal_arc{
+    box-shadow: inset 0px 0px 100px rgba(244, 223, 65, 0.6);
+     
+   }
 
 #MenstrualCycle > h1{
 top:1%;
@@ -504,8 +488,10 @@ top:1%;
   z-index:0;
   height: auto;
   position: absolute;
-  bottom:0%;
+  bottom:-2%;
   left:0%;
+  opacity: 60%;
+  animation: jiggle 5s ease-in-out infinite;
 }
 #graph{
   width:30vw;
@@ -601,10 +587,26 @@ margin-right:auto;
 }
 
 
+
+
+.achingImage_click{
+  animation: jiggle 2.5s ease-in-out;
+  
+}
+
+.painImage_click{
+  animation: wobble 2.5s ease-in-out;
+}
+.stigmaImage_click{
+  animation: shrink 2.5s ease-in-out;
+}
+
 #Debunking{
   background-color: rgb(58, 110, 99);
  
 }
+
+
 #Myths{
   background-color: #eda1b9;
   height: fit-content;
@@ -623,7 +625,7 @@ margin-right:auto;
 #mythContainer{
   display: flex;
   flex-direction: column;
-  
+  height:80vh
 }
 
 #Myths .myth{
@@ -687,4 +689,12 @@ text-wrap: wrap;
 }
 
 
-
+.info_card{
+width: 30vw;
+height: 30vh;
+background-color: #581c95;
+position:absolute;
+top:30%;
+right:50%;
+transform:translate(50%,50%)
+}
