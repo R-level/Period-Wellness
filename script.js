@@ -5,6 +5,10 @@ const menstrualGraph = document.querySelector('#menstrual_graph');
 const menstrualSection = document.querySelector('#MenstrualCycle div.ColumnsLeft');
 const graphSlices = menstrualGraph.querySelectorAll('span');
 const menstrualPage = document.querySelector('#MenstrualCycle');
+const infoCard = document.querySelector(".info_card");
+const infoCardType = document.querySelector(".info_card #type");
+const infoCardText = document.querySelector(".info_card #text");
+const infoCardMessage = document.querySelector(".info_card #message");
 
 // Add event listeners to the images
 achingImage.addEventListener('click', ()=>{
@@ -132,26 +136,46 @@ const createGraphInteraction = () => {
      
      resetGraph();
   }
-//  class Info{
-//  constructor(type, text, message){
-//      this.type = type;
-//      this.text = text;
-//      this.message = message;
-//    }
-//  }
-//const infoArray = [];
-//JSON.parse(info).forEach((info)=>{
-//  const newInfo = new Info(info.type, info.text, info.message);
-//  infoArray.push(newInfo);
-//})
+ class Info{
+ constructor(type, text, message){
+     this.type = type;
+     this.text = text;
+     this.message = message;
+   }
+   getType(){
+    return this.type;
+   }
+   getText(){
+    return this.text;
+   }
+   getMessage(){
+     return this.message;
+   }
+ }
+
+ const infoArray = [];
+
 async function getData(){
   const response = await fetch('https://raw.githubusercontent.com/R-level/Period-Wellness/main/data/info.json');
   const data = await response.json();
-  const info = JSON.stringify(data);
-  const infoList = JSON.parse(info);
-const infoArray = infoList.info;
-console.log(infoArray);  
-   
+  const infoObj = JSON.stringify(data);
+  const infoList = JSON.parse(infoObj);
+const list = infoList.info;
+
+   for(const info of list)
+   {
+    
+infoArray.push(new Info(info.type, info.text, info.message));
+   }
 }
+
+infoCard.addEventListener("click", ()=>{
+  const info = infoArray[Math.floor(Math.random()*(infoArray.length-1))];
+  console.log(info.getMessage());
+  const temp = info.getType();
+  infoCard.innerHTML= `<h3>${info.getType()}</h3><br><p>${info.getText()}</p><br><p>${info.getMessage()}</p>`
+  
+  });
+
 createGraphInteraction();
 getData();
