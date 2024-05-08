@@ -171,11 +171,26 @@ infoArray.push(new Info(info.type, info.text, info.message));
 
 infoCard.addEventListener("click", ()=>{
   const info = infoArray[Math.floor(Math.random()*(infoArray.length-1))];
-  console.log(info.getMessage());
-  const temp = info.getType();
-  infoCard.innerHTML= `<h3>${info.getType()}</h3><br><p>${info.getText()}</p><br><p>${info.getMessage()}</p>`
   
-  });
+  const temp = info.getType();
+  infoCard.get
+  let newParagraph = document.createElement(p);
+  newParagraph.textContent=info.getText();
+ // infoCard.innerHTML= <h3>${info.getType()}</h3><br><p>${info.getText()}</p><br><p>${info.getMessage()}</p>
+ infoCard.appendChild(newParagraph); 
+ if(temp==="myth"&&!infoCard.classList.contains("info_myth")){
+    infoCard.classList.remove("info_fact");
+    infoCard.classList.add("info_myth");
+  } if(temp==="fact"&&!infoCard.classList.contains("info_fact")){
+    infoCard.classList.remove("info_myth");
+    infoCard.classList.add("info_fact")
+  }});
 
+  const info_btns = document.querySelectorAll(".info_btn");
+  info_btns.forEach( (btn)=>{
+    btn.addEventListener("click", ()=>{
+      console.log(btn.textContent);
+    })
+  })
 createGraphInteraction();
 getData();

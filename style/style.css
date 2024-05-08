@@ -688,13 +688,55 @@ text-wrap: wrap;
   visibility: hidden;
 }
 
-
+.info_card_container{
+position:relative;
+left:50%;
+top:40%;
+transform: translate(-50%);
+background-color: #4f81bd;
+border-radius: 0.75rem;
+height: fit-content;
+width: fit-content;
+}
 .info_card{
 width: 30vw;
-height: 30vh;
-background-color: #581c95;
-position:absolute;
-top:30%;
-right:50%;
-transform:translate(50%,50%)
+height: 45vh;
+background-color: #d6d6d6;
+display: block;
+border-radius: 0.75rem 0.75rem  0.3rem 0.3rem;
+padding:2%;
+font-size: 0.75em;
+}
+.info_myth{
+  background-color: hsla(270, 68%, 35%, 0.5);
+  
+}
+.info_fact{
+background-color: hsla(167, 68%, 35%, 0.5);
+
+}
+.info_btns_container{
+  
+  display:block;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom:2%;
+  
+}
+.info_btn{
+display:inline;
+background-color: #fcc8b9;
+border:none;
+padding:5%;
+border-radius: 0.5rem;
+cursor:pointer;
+}
+ #fact:hover{
+  background-color: #e60829;
+}
+#fact:focus{
+  background-color: #f1ecec;
+}
+#myth:hover{
+  background-color: #75bd4f;
 }
