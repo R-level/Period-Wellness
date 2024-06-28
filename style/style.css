@@ -1,6 +1,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth ;
   }
   *,
   *::before,
@@ -12,8 +13,13 @@ html {
     margin:0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgba(251, 163, 163, 0.974);
-    
+    overflow-x: hidden;
 }
+body::-webkit-scrollbar{
+  display:none;
+}
+
+
 section{
     margin:0;
     display:grid;
@@ -22,7 +28,7 @@ section{
 }
 
 
-#intro{
+.intro{
     position: relative;
     text-align: center;
     grid-column: 1;
@@ -30,6 +36,15 @@ section{
    height: 100vh;
 background-color: #eda1b9;
 }   
+@media(max-width: 800px){
+  .intro{
+      height:50vh;
+    }
+
+    }
+
+
+
 #Talk{
   color: rgb(72, 20, 20);
   size: 30rem;
@@ -122,9 +137,14 @@ font-size:2.5vw;
 
 
 
-#WhatIsIt{
+.WhatIsIt{
   background-color: #f8ede5;
     height:105vh;
+}
+@media(max-width:800px){
+  .WhatIsIt{
+    height: 50vh;
+  }
 }
 
 #green_cup{
@@ -258,7 +278,7 @@ top:1%;
   top:20%;
 }
 #choices{
-    display: flex;
+    display: block;
     position: absolute;
     top:75%;
     left:50%;
@@ -267,15 +287,20 @@ top:1%;
 
 }
 .topic{
-   flex-wrap: wrap;
+  
     position: relative;
  margin:20px;
- padding-top:2%;
+ padding:12%;
+ border-radius: 50%;
  height: auto;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  text-align:center;
  color: rgb(72, 20, 20);
- background-color: #f8ede5;
+
+
+background: linear-gradient()
 }
+
 
 a{
   text-decoration: none;
@@ -284,21 +309,40 @@ a{
 
 }a:hover{
   color:#eda1b9;
+  
 } 
 
 
-#IntroToMenstrualCycle{
+.IntroToMenstrualCycle{
   background-color: #E8A0BB;
   height: 110vh;
 }
-#MenstrualCycleDefinition{
-  background-color:rgb(250, 250, 250)
+
+
+.MenstrualCycleDefinition{
+  background-color:rgb(250, 250, 250);
+  height:110vh;
 }
-#MenstrualCycle{
+
+
+.MenstrualCycle{
  background-color:#EDE8EA;
  height:150vh;
 }
-
+@media(max-width:100px){
+  .IntroToMenstrualCycle{
+    height:40vh;
+  }
+  .MenstrualCycleDefinition{
+    height:30vh;
+  }
+  .MenstrualCycle{
+    height: 60vh;
+  }
+  .Period_Poverty{
+    height: 30vh;
+  }
+}
 #MenstrualCycle>.ColumnsLeft{
   position: absolute;
   left:30%;
@@ -374,11 +418,11 @@ a{
     }
     .menses_hover:hover{
       box-shadow: inset 0 0 100px rgb(73, 73, 73, 0.5);
-    
+      transition: box-shadow 0.2s ease-in;
     }
     .selected_menses_arc{
       box-shadow: inset 0 0 100px rgba(244, 223, 65, 0.5);
-    
+      transition: box-shadow 0.2s ease-in;
     }
     #menses_arc::before{
       content:'menstration';
@@ -403,12 +447,12 @@ a{
      }
      .follicular_hover:hover{
       box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
-     
+      transition: box-shadow 0.2s ease-in;
      }
    
   .selected_follicular_arc{
     box-shadow: inset 0px 0px 100px rgba(226, 236, 29, 0.326);
-     
+    transition: box-shadow 0.2s ease-in;
   }
    
      #follicular_arc::before{
@@ -434,7 +478,7 @@ a{
   }
   .ovulation_hover:hover{
     box-shadow: inset 0px 0px 100px rgba(73, 73, 73, 0.5);
-   
+    transition: box-shadow 0.2s ease-in;
   }
   #ovulation_arc::before{
     content:'ovulation';
@@ -447,6 +491,7 @@ a{
   }
   .selected_ovulation_arc{
     box-shadow: inset 0px 0px 100px rgba(244, 223, 65, 0.5);
+    transition: box-shadow 0.2s ease-in;
   }
     #luteal_arc{
       
@@ -464,7 +509,7 @@ a{
     }
     .luteal_hover:hover{
       box-shadow: inset 0px 0px 100px rgba(55, 37, 74, 0.5);
-     
+      transition: box-shadow 0.2s ease-in;
     }
    #luteal_arc::before{
     content:"luteal";
@@ -477,7 +522,7 @@ a{
    }
    .selected_luteal_arc{
     box-shadow: inset 0px 0px 100px rgba(244, 223, 65, 0.6);
-     
+    transition: box-shadow 0.2s ease-in;
    }
 
 #MenstrualCycle > h1{
@@ -502,15 +547,6 @@ top:1%;
   right:10%;
 }
 
-#DysmenorrheaHeading{
-position:absolute;
-top:1%;
-left:50%;
-transform: translate(-50%,-50%);
-}
-#Dysmenorrhea{
-  height:120vh;
-}
 
 #GreenPeriodPower{
   width:25vw;
@@ -519,11 +555,16 @@ transform: translate(-50%,-50%);
   left:25%;
   transform:translate(-50%,-50%)
 }
-#Period_Poverty{
+.Period_Poverty{
   height:150vh;
   padding-bottom: 20em;
 }
-#Period_Poverty p{
+@media (max-width: 800px) {
+  .Period_Poverty{
+    height:50vh;
+  }
+}
+.Period_Poverty p{
 color:#7c4a4a;
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -546,7 +587,7 @@ rotate:-15deg;
 
 }
 
-#Period_Struggles{
+.Period_Struggles{
   background-color: #fcc8b9;
   height:120vh;
 }
@@ -586,9 +627,6 @@ margin-right:auto;
   font-size: 2em;
 }
 
-
-
-
 .achingImage_click{
   animation: jiggle 2.5s ease-in-out;
   
@@ -603,7 +641,7 @@ margin-right:auto;
 
 #Debunking{
   background-color: rgb(58, 110, 99);
- 
+ height: fit-content;
 }
 
 
@@ -652,6 +690,21 @@ text-wrap: wrap;
   
   animation: jiggle 5.5s ease infinite;
  
+}
+@media(max-width:100px){
+  .IntroToMenstrualCycle{
+    height:40vh;
+  }
+  .MenstrualCycleDefinition{
+    height:30vh;
+  }
+  .MenstrualCycle{
+    height: 60vh;
+  }
+  .Period_Struggles{
+    height:50vh;
+  }
+  
 }
 
 @keyframes jiggle {
@@ -743,6 +796,9 @@ color:#8064A2
   background-color: #c1a7db;
   transition: ease-in  0.15s;
 }
+
+
+
 /**
 This is a test for STYLE of the info card
 
@@ -753,12 +809,12 @@ This is a test for STYLE of the info card
 
 .tinder {
   width: 100vw;
-  height: 100vh;
+  
   flex-direction: column;
-  position: relative;
+  position:relative;
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
-  margin-top: 100px;
+  
 }
 
 .loaded.tinder {
@@ -802,12 +858,13 @@ This is a test for STYLE of the info card
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-top:250px;
   z-index: 1;
 }
 
 .tinder--card {
   display: inline-block;
-  width: 90vw;
+  width: 50vw;
   max-width: 400px;
   height: 70vh;
   background: #FFFFFF;
